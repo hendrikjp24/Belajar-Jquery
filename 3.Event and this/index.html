@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event and this pada Jquery</title>
+    <script src="./jquery.js"></script>
+    <style>
+        * {
+            margin: 15px 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Belajar Jquery</h1>
+    <div id="box">Box 1</div>
+
+    <div class="boxes">Baris Pertama</div>
+    <div class="boxes">Baris Kedua</div>
+    <div class="boxes">Baris Ketiga</div>
+    <div class="boxes">Baris Keempat</div>
+
+    <script>
+
+        $(document).ready(()=>{
+            $("h1").css("display","inline-block");
+            
+            // Membuat event pada Jquery
+            // event pada tag h1
+            $("h1").click(function(){
+                $("h1").css("color","red");
+            });
+
+            $("h1").mouseenter(function(){
+                $("h1").css("cursor","pointer");
+            });
+
+            $("h1").mouseleave(function(){
+                $("h1").css("cursor","none");
+            });
+
+
+            // event pada class boxes
+            $(".boxes").mouseenter(function(){
+                $(this).css("cursor","pointer");
+                $(this).css("color","red");
+            });
+
+            // nb: this itu digunakan untuk mengetahui element mana yang dimaksudkan, sehingga tidak perlu lagi menuliskan tag ataupun class ataupun id jika yang dimaksudkan sama dengan letak eventnya
+
+            $(".boxes").mouseleave(function(){
+                $(this).css("cursor","none");
+                $(this).css("color","black");
+            });
+
+        });
+
+    </script>
+    
+</body>
+</html>
