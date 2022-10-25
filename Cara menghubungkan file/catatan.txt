@@ -1,0 +1,5 @@
+Untuk menggunakan Jquery, pertama kita dapat mendownload jquery pada website resminya di "https:www.jquery.com" atau kita dapat men-loadnya dengan memanfaatkan cdn jquery yang ada pada internet, salah satunya yang disediakan oleh google.
+
+Untuk menload cdn ataupun jquery yang kita download, kita dapat menaruhnya didalam tag head atau kita juga dapat meletakkannya di atas penutup tag body
+
+untuk kodingan jquery sendiri dapat diletakkan dibawah sebelum penutup tag body ataupun ditaruh di luar file dari file html itu sendiri.
