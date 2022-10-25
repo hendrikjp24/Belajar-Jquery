@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Selection</title>
+    <script src="./jquery.js"></script>
+</head>
+<body>
+    <h1>Belajar Jquery Selection</h1>
+    <h1>Hello World!</h1>
+    <div id="box">Box 1</div>
+
+    <script src="./script.js"></script>
+
+    <script>
+        $(document).ready(()=>{
+            $('h1').css('font-style','italic');
+            $('.boxes').css('color', 'red');
+            $('#box').css('font-size', "40px");
+
+            // untuk menyeleksi secara spesifik dapat dilakukan seperti cara dibawah ini
+
+            $(".boxes:first").css("color","green");
+
+            $(".boxes:last").css("color","orange");
+
+            $(".boxes:eq(2)").css("color","purple");
+
+            // nb : eq(no index yang dituju)
+            $("h1:eq(0)").css("color","red");
+
+        });
+
+    </script>
+</body>
+</html>
