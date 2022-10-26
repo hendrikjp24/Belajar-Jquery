@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Jquery</title>
+    <script src="./jquery.js"></script>
+</head>
+<body>
+    <h1>Mengambil dan Mengubah konten Html</h1>
+    <div class="form">
+        <form action="">
+            <input type="text" name="text" id="text">
+            <button type="submit">Submit</button>
+
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            // Mengambil nilai dari suatu tag
+            $("form").submit(function(){
+                var isiText = $("#text").val();
+                // .val() => digunakan untuk mengambil isi dari sebuah inputan dari suatu form,
+                // ketika () diisi argument, maka itu berarti kita men-set isi dari suatu inputan yang kita maksud dengan argument tersebut
+                
+                $("h1").text(isiText);
+                // untuk .text() fungsinya sama saja tetapi digunakan untuk mengambil isi tag html
+                event.preventDefault();
+
+                // .html() digunakan untuk get dan set div
+                
+            });
+        });
+    </script>
+</body>
+</html>
