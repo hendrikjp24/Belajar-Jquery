@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Jquery</title>
+    <script src="./jquery.js"></script>
+</head>
+<body>
+    <h1>Belajar Menampilkan dan menyebunyikan elemen</h1>
+    
+    <h2>Show, Hide dan Toggle</h2>
+    <div id="box"></div>
+    <button id="btn1">Show</button>
+    <button id="btn2">Hide</button>
+    <button id="btn3">Toggle</button>
+    <br>
+
+    <h2>FadeOut, FadeIn dan FadeTo</h2>
+    <div id="box2"></div>
+    <button id="btn4">FadeOut</button>
+    <button id="btn5">FadeIn</button>
+    <button id="btn6">FadeTo</button>
+    <br>
+
+    <h2>SlideUp, SlideDown dan SlideToggle</h2>
+    <div id="box3"></div>
+    <button id="btn7">SlideUp</button>
+    <button id="btn8">SlideDown</button>
+    <button id="btn9">SlideToggle</button>
+    <br>
+
+    <script>
+        $(document).ready(()=>{
+            $("#box").css({
+                "width" : "200px",
+                "height" : "200px",
+                "backgroundColor" : "grey",
+                "margin" : "20px"
+            });
+
+            $("button").css("marginLeft","20px");
+
+
+            // show - hide - toggle
+            $("#btn1").click(function(){
+                $("#box").show();
+            });
+
+            $("#btn2").click(function(){
+                $("#box").hide();
+            });
+
+            $("#btn3").click(function(){
+               $("#box") .toggle();
+            });
+
+            // fadeOut - FadeIn - FadeTo
+            $("#box2").css({
+                "width" : "200px",
+                "height" : "200px",
+                "backgroundColor" : "grey",
+                "margin" : "20px"
+            });
+
+            $("#btn4").click(function(){
+                $("#box2").fadeOut(1500);
+            });
+
+            $("#btn5").click(function(){
+                $("#box2").fadeIn(1500);
+            });
+
+            // untuk fadeto kita dapat mengatur opacity yang kita mau dan akan langsung mengetahui fade yang ingin dijalankandd
+            $("#btn6").click(function(){
+                $("#box2").fadeTo(1000,0.5);
+            });
+
+            // SlideUp - SlideDown - SlideToggle
+            $("#box3").css({
+                "width" : "200px",
+                "height" : "200px",
+                "backgroundColor" : "grey",
+                "margin" : "20px"
+            });
+
+            $("#btn7").click(function(){
+                $("#box3").slideUp(1500);
+            });
+
+            $("#btn8").click(function(){
+                $("#box3").slideDown(1500);
+            });
+
+            // SlideToggle akan melakukan animasi slideup /slidedown dengan sendirinya
+
+            $("#btn9").click(function(){
+                $("#box3").slideToggle(1500);
+            });
+
+        });
+    </script>
+</body>
+</html>
