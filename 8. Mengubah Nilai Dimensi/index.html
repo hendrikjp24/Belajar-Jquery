@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Jquery</title>
+    <script src="./jquery.js"></script>
+    <style>
+        #box,#box2 {
+            background-color: black;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Belajar Tentang Mengubah Nilai dimensi Width/Height</h1>
+
+    <div id="box"></div>
+
+    <div id="box2"></div>
+    
+    <script>
+        $(document).ready(()=>{
+            // untuk mengubah nilai dimensi width/ height ada 2 cara
+            // 1. mengubah dengan menggunakan css
+            // 2. dengan menggunakan width/height
+
+            // 1. css
+            $("#box").css({
+                "width" : "100px",
+                "height" : "100px"
+            });
+
+            // 2. dengan menggunakan width/height
+            $("#box2").width("100px").height("100px");
+
+        });
+    </script>
+</body>
+</html>
