@@ -74,7 +74,13 @@
 
             // untuk fadeto kita dapat mengatur opacity yang kita mau dan akan langsung mengetahui fade yang ingin dijalankandd
             $("#btn6").click(function(){
-                $("#box2").fadeTo(1000,0.5);
+                // $("#box2").fadeTo(1000,0.5);
+               var opcty = $("#box2").css("opacity");
+               if ( opcty == 1 ){
+                $("#box2").fadeTo(1000,0);
+               }else{
+                $("#box2").fadeTo(1000,1);
+               }
             });
 
             // SlideUp - SlideDown - SlideToggle
