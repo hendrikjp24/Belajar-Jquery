@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Jquery</title>
+    <script src="./jquery.js"></script>
+    <style>
+        #box {
+            width: 100px;
+            height: 150px;
+            padding: 20px;
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Belajar Mengambil nilai dimensi (width, height)</h1>
+
+    <div id="box">ambil nilai dimensi</div>
+    
+    <script>
+        $(document).ready(()=>{
+
+            // width/height => digunakan untuk mengambil nilai width/height konten
+            var width = $("#box").width();
+            var height = $("#box").height();
+
+            // innerWidth/innerHeight => digunakan untuk mengambil nilai lebar/tinggi + padding yang diberikan
+            var inWidth = $("#box").innerWidth();
+            var inHeight = $("#box").innerHeight();
+
+            // outerWidth/outerHeight => digunakan untuk mengambil nilai lebar/tinggi + padding + margin
+            var outWidth = $("#box").outerWidth(true);
+            var outHeight = $("#box").outerHeight(true);
+            $("#box").text(outHeight);
+
+        });
+    </script>
+</body>
+</html>
