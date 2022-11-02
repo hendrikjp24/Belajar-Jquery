@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Jquery</title>
+    <script src="./jquery.js"></script>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            margin: 20px;
+        }
+
+        button {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Belajar Stop Animasi, CallBack and Chaining</h1>
+    
+    <div id="box"></div>
+    <button id="btn1">SlideUp</button>
+    <button id="btn2">SlideDown</button>
+    <button id="btn3">SlideToggle</button>
+    <button id="btn4">Stop Animasi</button>
+    <button id="btn5">Chaining</button>
+
+    <script>
+        $(document).ready(()=>{
+            // Stop Animasi - Callback - Chaining
+            $("#btn1").click(function(){
+                $("#box").slideUp(2000);
+            });
+
+            // callback => digunakan untuk menjalankan function ketika function sebelumnya sudah selesai dijalankan
+
+            $("#btn2").click(function(){
+                // cth pemakaian callback sepeerti dibawah
+                $("#box").slideDown(2000,function(){
+                    alert("Slide Down selesai berjalan");
+                });
+            });
+
+            // Chaining (merantai) => seperti namanya digunakan untuk merantai animasi dengan penghubungnya .
+            
+            // contoh chaining seperti dibawah ini
+
+            $("#btn5").click(function(){
+                $("#box").slideUp(2000).fadeIn(2000).fadeTo(2000,0.5);
+            });
+            
+
+            $("#btn3").click(function(){
+            $("#box").slideToggle(2000);
+            });
+
+            // UNtuk Stop animasi
+            $("#btn4").click(function(){
+                $("#box").stop();   
+            });
+
+            
+
+        });
+    </script>
+</body>
+</html>
