@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Jquery</title>
+    <script src="./jquery.js"></script>
+</head>
+<body>
+    <h1>Mempelajari tentang Sibling</h1>
+    
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li class="li5">Item 5</li>
+        <li>Item 6</li>
+        <li>Item 7</li>
+        <li>Item 8</li>
+    </ul>
+    
+    <script>
+        $(document).ready(()=>{
+            // Siblings - next - nextAll - nextUntil(parameter) - prev - prevAll - prevUntil(parameter) 
+
+            // siblings => digunakan untuk menyeleksi siblings selain dia sendiri
+
+            $(".li5").siblings().css("fontSize", "24px");
+
+            // next => digunakan untuk menyeleksi sibling setelah dirinya
+            $(".li5").next().css("color","red");
+
+            // nextAll => digunakan untuk menyeleksi seluruh sibling setelah dirinya
+            $(".li5").nextAll().css("backgroundColor","yellow");
+
+            // nextUntil => digunakan untuk menyeleksi sibling selanjutnya dan akan berhenti dengan parameter yang diberikan
+            $(".li5").nextUntil("li:last()").css("fontStyle","italic");
+
+            //  begitu pula untuk prev yang merupakan kebalikan dari next
+        });
+    </script>
+</body>
+</html>
