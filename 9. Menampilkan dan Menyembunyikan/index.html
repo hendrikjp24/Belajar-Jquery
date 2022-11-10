@@ -77,7 +77,9 @@
                 // $("#box2").fadeTo(1000,0.5);
                var opcty = $("#box2").css("opacity");
                if ( opcty == 1 ){
-                $("#box2").fadeTo(1000,0);
+                $("#box2").fadeTo(1000,0,function(){
+                    $("#box2").hide();
+                });
                }else{
                 $("#box2").fadeTo(1000,1);
                }

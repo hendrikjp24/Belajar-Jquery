@@ -29,9 +29,14 @@ $(document).ready(()=>{
     $("li:eq(4)").remove();
 
 // b. empty() => digunakan untuk mengahpus element tetapi tidak benar" menghapusnya, disini akan saya contohkan pada tag h1
-    $("h1").css("background-color","red");
-    $("h1").css("width","100px");
-    $("h1").css("height","100px");
+    $("h1").css({
+        "backgroundColor" : "red",
+        "width" : "100px",
+        "height" : "100px"
+    });
+    // $("h1").css("background-color","red");
+    // $("h1").css("width","100px");
+    // $("h1").css("height","100px");
     $("h1").empty();
     
 });
